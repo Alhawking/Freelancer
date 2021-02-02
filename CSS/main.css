@@ -1,0 +1,254 @@
+/*Colors palette and sources to use variables*/
+:root{
+    --primaryBlue:#00bfd8;
+    --primaryRed:#AB4332;
+    --primaryPurple:#BA3EED;   
+    --gray:#d8d8d8  ;
+}
+/* CSS selectors with HTML tags*/
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+    scroll-snap-type: y mandatory;
+}
+body{
+    font-size: 16px;/*1rem=10px*/
+    font-family: 'Lato', sans-derif; 
+    background-image: linear-gradient(to top, #eee 0%, white 100%);
+}
+nav{
+    background-color:var(--primaryBlue);
+}
+div h1 {
+    margin-bottom:25rem
+}
+h3{
+  color:#008EA0;  
+  font-weight: 400;
+  transition:1.3s;
+  cursor:pointer;
+}
+h2{
+    text-align: center;
+}
+input{
+    border:none;
+    padding:2rem;
+    width:90%;
+    border-radius: 1rem;
+}
+textarea{
+    border:none;
+    padding:2rem;
+    width:90%;
+    border-radius: 1rem;
+    height:15rem;
+}
+footer{
+    margin:2rem;
+    text-align: center;
+    background-color: black;
+    color:white;
+    padding:1rem;
+}
+/*CSS selectors with classes*/
+.links-Nav{
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    padding:1rem;
+    font-size:2rem;
+    font-weight: bolder;
+    width: 10rem;
+    border-radius:.3rem;
+}
+.links-Nav:hover{
+    background-color: var(--primaryRed);
+    color:var(--gray);
+}
+.links-Nav:active{
+    color:black;
+}
+.contenedor{
+    max-width:120rem;
+    margin:0rem auto;
+    display:flex;
+    justify-content: space-between;
+}
+.contenedor2{
+    max-width:120rem;
+    margin:0rem auto;
+    display:flex;
+    flex-direction: column;
+    border-radius: 0.5rem;
+}
+.servicios{
+    display:grid;
+    grid-template-columns: repeat(3,30rem);
+}
+.nav-background{
+    background-color:var(--primaryBlue);
+    height:fit-content;
+}
+.other-links{
+    background-color: #00bfd8;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1rem;
+}
+.other-links:hover{
+    color:black;
+    background-color: var(--gray);
+}
+section.main-section{
+    background-image: url(https://image.shutterstock.com/z/stock-photo-programming-man-working-on-computer-in-it-office-sitting-at-desk-writing-codes-programmer-typing-1032639931.jpg);
+    height:51.92rem;
+    background-repeat: no-repeat;
+    background-size:cover;
+    position:relative;
+    margin-bottom: 2rem;
+} 
+.main-section-content{
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:100%;
+}
+.shadow{
+    -webkit-box-shadow: -2px 2px 16px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px 2px 16px 0px rgba(0,0,0,0.75);
+box-shadow: -2px 2px 16px 0px rgba(0,0,0,0.75);
+}
+.titulo{
+    text-align: center;
+}
+.section-main{
+    padding:2rem;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.iconos{
+    border:solid;
+    border-color: #00bfd8;
+    width:10rem;
+    height:10rem;
+    border-radius: 50%;
+    display :flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition:1s;
+    cursor:pointer;
+}
+.input{
+    margin-bottom: 1rem;
+}
+.input label{
+    color:#008EA0;
+    font-weight: 900;
+    margin:0.5rem;
+    display:block;
+}
+.submit{
+    border-style:none;
+    border-radius: 1rem;
+    padding:1.5rem;
+    cursor:pointer;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+
+}
+.submit:hover{
+    background-color:#008EA0;
+    color:white;
+}
+.bigger:hover{
+    transform:scale(1.1,1.1);
+}
+.bigger2:hover{
+    font-weight: 900;
+    transform:scale(1.1,1.1);
+}
+.trans{
+    transition:0.5s;
+}
+.nav-background,.servicios,#contacto,footer{
+    scroll-snap-align:top;
+    scroll-snap-stop: always;
+}
+/*CSS selectors with id's*/
+#top-page{
+    text-align:center;
+    font-size:3rem;
+    margin: 0.5rem;
+
+}
+#top-page span{
+    font-size:2rem;
+}
+#ciudad-mexico{
+    color:white;
+    font-size: 2rem;
+    font-weight:900;
+}
+#contacto{
+    max-width:50rem;
+    margin:0 auto;
+    margin-bottom: 3rem;
+    background-color: var(--gray);
+    padding:2rem;
+    border-radius: 2rem;
+}
+#contacto fieldset{
+    border:none;
+    align-items: center;
+}
+#contacto legend{
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    margin:1rem;
+    color:var(--primaryBlue);
+}
+/*Media Queries because of the web responsive design*/
+@media (min-width: 200px){
+    .contenedor{
+        flex-direction: column;
+        align-items: center;
+    }
+    .links-Nav{
+        width:100%;
+    }
+    .other-links{
+        width:auto;
+    }
+    .servicios{
+        display:flex;
+        flex-direction: column;
+    }
+    .submit{
+        width:100%
+    }
+} 
+@media(min-width: 768px){
+    .contenedor{
+        flex-direction: row;
+        align-items: center;
+    }
+    .links-Nav{
+        width:10rem;
+    }
+    .servicios{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    .submit{
+        width:auto;
+    }
+}
